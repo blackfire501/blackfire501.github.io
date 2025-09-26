@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adwaith S Kumar - Full-Stack Developer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font import and fallback */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-slate-50 text-slate-900;
+        }
+
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e2e8f0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#home" class="text-xl font-bold text-slate-900 hover:text-orange-500 transition-colors">Adwaith S Kumar</a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="#about" class="text-slate-600 hover:text-orange-500 transition-colors">About</a>
+                <a href="#projects" class="text-slate-600 hover:text-orange-500 transition-colors">Projects</a>
+                <a href="#contact" class="text-slate-600 hover:text-orange-500 transition-colors">Contact</a>
+                <a href="https://drive.google.com/uc?export=download&id=your_resume_id_here" target="_blank" class="px-4 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-colors shadow-lg">Download Resume</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-button" class="md:hidden text-slate-600 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white mt-2 border-t border-gray-200">
+            <nav class="flex flex-col items-center py-4 space-y-4">
+                <a href="#about" class="text-slate-600 hover:text-orange-500 transition-colors w-full text-center py-2">About</a>
+                <a href="#projects" class="text-slate-600 hover:text-orange-500 transition-colors w-full text-center py-2">Projects</a>
+                <a href="#contact" class="text-slate-600 hover:text-orange-500 transition-colors w-full text-center py-2">Contact</a>
+                <a href="https://drive.google.com/uc?export=download&id=your_resume_id_here" target="_blank" class="px-6 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-colors w-1/2 text-center shadow-lg">Download Resume</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 lg:px-8">
+
+        <!-- Home/Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center text-center py-20">
+            <div>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 leading-tight mb-4">
+                    Full-Stack Developer & Digital Problem Solver
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-600 mb-8">
+                    Crafting Web Experiences That Actually <span id="typing-text" class="font-bold text-orange-500"></span>
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#projects" class="px-8 py-3 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-all transform hover:scale-105 shadow-xl">
+                        View My Work
+                    </a>
+                    <a href="https://drive.google.com/uc?export=download&id=your_resume_id_here" target="_blank" class="px-8 py-3 bg-white text-slate-900 rounded-full border border-gray-300 hover:bg-slate-100 transition-all transform hover:scale-105 shadow-xl">
+                        Download Resume
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20">
+            <h2 class="text-4xl font-bold text-center text-slate-900 mb-12">The Human Behind the Code</h2>
+            <div class="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:space-x-12 space-y-8 lg:space-y-0">
+                <div class="w-full lg:w-1/3 p-6 bg-white rounded-xl shadow-lg border border-gray-100">
+                    <img src="https://placehold.co/400x400/1e293b/f8fafc?text=Adwaith" alt="Professional headshot of Adwaith S Kumar" class="rounded-full w-48 h-48 mx-auto mb-6 object-cover border-4 border-orange-500">
+                    <p class="text-base text-slate-700 leading-relaxed mb-6">
+                        Hey there! I'm adwaith s kumar– a passionate full-stack developer who loves turning wild ideas into pixel-perfect reality. Currently crushing my BTech (Class of 2025), but I've been coding since before it was cool to have "developer" in your bio.
+                    </p>
+                    <p class="text-base text-slate-700 leading-relaxed mb-6">
+                        My superpower? Building seamless web experiences that make users go "wow, that just works!" From crafting responsive frontends with React and Vue to architecting robust backends with Python and Django, I speak fluent code in multiple dialects.
+                    </p>
+                    <p class="text-base text-slate-700 leading-relaxed mb-6">
+                        When I'm not debugging at 2 AM (okay, maybe I am), you'll find me exploring the latest web technologies, creating digital designs in Illustrator, or helping teams bring their visions to life through clear communication and solid project management.
+                    </p>
+                    <p class="text-base text-slate-700 leading-relaxed">
+                        I believe great software isn't just about clean code – it's about solving real problems for real people. Ready to build something amazing together?
+                    </p>
+                </div>
+                
+                <div class="w-full lg:w-2/3 space-y-8">
+                    <!-- Skills Section -->
+                    <div class="p-6 bg-white rounded-xl shadow-lg border border-gray-100">
+                        <h3 class="text-2xl font-semibold text-slate-900 mb-6">My Technical Toolbox</h3>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                            <!-- Skill Badges -->
+                            <span class="bg-gray-100 text-gray-800 text-sm px-4 py-2 rounded-full font-medium text-center">React</span>
+                            <span class="bg-gray-100 text-gray-800 text-sm px-4 py-2 rounded-full font-medium text-center">Vue.js</span>
+                            <span class="bg-gray-100 text-gray-800 text-sm px-4 py-2 rounded-full font-medium text-center">Python</span>
+                            <span class="bg-gray-100 text-gray-800 text-sm px-4 py-2 rounded-full font-medium text-center">Django</span>
+                            <span class="bg-gray-100 text-gray-800 text-sm px-4 py-2 rounded-full font-medium text-center">Node.js</span>
+                            <span class="bg-gray-100 text-gray-800 text-sm px-4 py-2 rounded-full font-medium text-center">MongoDB</span>
+                            <span class="bg-gray-100 text-gray-800 text-sm px-4 py-2 rounded-full font-medium text-center">PostgreSQL</span>
+                            <span class="bg-gray-100 text-gray-800 text-sm px-4 py-2 rounded-full font-medium text-center">JavaScript</span>
+                            <span class="bg-gray-100 text-gray-800 text-sm px-4 py-2 rounded-full font-medium text-center">HTML5 & CSS3</span>
+                            <span class="bg-gray-100 text-gray-800 text-sm px-4 py-2 rounded-full font-medium text-center">Tailwind CSS</span>
+                            <span class="bg-gray-100 text-gray-800 text-sm px-4 py-2 rounded-full font-medium text-center">Git & GitHub</span>
+                            <span class="bg-100 text-gray-800 text-sm px-4 py-2 rounded-full font-medium text-center">Illustrator</span>
+                        </div>
+                    </div>
+
+                    <!-- Education Card -->
+                    <div class="p-6 bg-white rounded-xl shadow-lg border border-gray-100">
+                        <h3 class="text-2xl font-semibold text-slate-900 mb-4">Education</h3>
+                        <div class="flex items-center space-x-4">
+                            <img src="https://placehold.co/60x60/f8fafc/64748b?text=B" alt="Education icon" class="w-16 h-16 rounded-full object-cover">
+                            <div>
+                                <p class="text-xl font-medium text-slate-900">Bachelor of Technology (BTech)</p>
+                                <p class="text-slate-600">Computer Science and Engineering</p>
+                                <p class="text-sm text-slate-500">2021 - 2025 (Expected)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <h2 class="text-4xl font-bold text-center text-slate-900 mb-12">Things I've Built</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/600x400/f8fafc/64748b?text=Project+1" alt="Project 1 preview" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Portfolio Website V1</h3>
+                        <p class="text-slate-600 mb-4">A showcase of my projects and skills, built with a modern tech stack.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full font-medium">HTML</span>
+                            <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full font-medium">Tailwind CSS</span>
+                            <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full font-medium">JavaScript</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="px-4 py-2 text-white bg-slate-800 rounded-full text-sm hover:bg-slate-900 transition-colors">See Live Demo</a>
+                            <a href="#" class="px-4 py-2 text-slate-800 bg-gray-100 rounded-full text-sm hover:bg-gray-200 transition-colors">Check GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/600x400/f8fafc/64748b?text=Project+2" alt="Project 2 preview" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">E-commerce Backend API</h3>
+                        <p class="text-slate-600 mb-4">A RESTful API for a full-featured e-commerce platform, handling user auth, products, and orders.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full font-medium">Python</span>
+                            <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full font-medium">Django</span>
+                            <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full font-medium">PostgreSQL</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="px-4 py-2 text-white bg-slate-800 rounded-full text-sm hover:bg-slate-900 transition-colors">See Live Demo</a>
+                            <a href="#" class="px-4 py-2 text-slate-800 bg-gray-100 rounded-full text-sm hover:bg-gray-200 transition-colors">Check GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/600x400/f8fafc/64748b?text=Project+3" alt="Project 3 preview" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Real-time Chat Application</h3>
+                        <p class="text-slate-600 mb-4">A modern chat application with real-time messaging, user authentication, and group chats.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full font-medium">React</span>
+                            <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full font-medium">Node.js</span>
+                            <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full font-medium">Socket.IO</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="px-4 py-2 text-white bg-slate-800 rounded-full text-sm hover:bg-slate-900 transition-colors">See Live Demo</a>
+                            <a href="#" class="px-4 py-2 text-slate-800 bg-gray-100 rounded-full text-sm hover:bg-gray-200 transition-colors">Check GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden transform transition-transform duration-300 hover:scale-105">
+                    <img src="https://placehold.co/600x400/f8fafc/64748b?text=Project+4" alt="Project 4 preview" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Data Visualization Dashboard</h3>
+                        <p class="text-slate-600 mb-4">An interactive dashboard to visualize and analyze sales data using d3.js.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full font-medium">JavaScript</span>
+                            <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full font-medium">D3.js</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="px-4 py-2 text-white bg-slate-800 rounded-full text-sm hover:bg-slate-900 transition-colors">See Live Demo</a>
+                            <a href="#" class="px-4 py-2 text-slate-800 bg-gray-100 rounded-full text-sm hover:bg-gray-200 transition-colors">Check GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <h2 class="text-4xl font-bold text-center text-slate-900 mb-12">Let's Create Together</h2>
+            <div class="max-w-xl mx-auto p-8 bg-white rounded-xl shadow-lg border border-gray-100">
+                <form action="https://formspree.io/f/your_form_id_here" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Name</label>
+                        <input type="text" id="name" name="name" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 transition-colors" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-slate-700 mb-1">Email</label>
+                        <input type="email" id="email" name="_replyto" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 transition-colors" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-slate-700 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="5" class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500 transition-colors" required></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-all transform hover:scale-105 shadow-md">Send Message</button>
+                    </div>
+                </form>
+                <div class="mt-8 text-center text-slate-600">
+                    <p class="mb-2">Or connect with me directly:</p>
+                    <div class="flex justify-center space-x-6 text-xl">
+                        <a href="mailto:adwaithsk2803@gmail.com" class="text-orange-500 hover:text-orange-600 transition-colors" aria-label="Email link">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
+                        </a>
+                        <a href="https://github.com/johntester" target="_blank" class="text-slate-800 hover:text-slate-900 transition-colors" aria-label="GitHub profile">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.542-1.355-1.325-1.71-1.325-1.71-1.087-.744.084-.73.084-.73 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.49-1.0.108-.737.42-.1.821-.293-1.018-.466-2.083-.759-3.188-.759-2.583 0-4.685-1.85-4.685-4.12 0-1.21.423-2.193 1.12-2.96-.12-.293-.49-1.4.114-2.943 0 0 .971-.302 3.173 1.205.927-.258 1.921-.387 2.914-.391 1.0.004 1.99.133 2.917.391 2.201-1.507 3.173-1.205 3.173-1.205.604 1.543.234 2.65.114 2.943.697.766 1.12 1.75 1.12 2.96 0 2.27-2.104 4.118-4.691 4.118-.853 0-1.673-.146-2.4-.415.14.365.29.83.29 1.488 0 1.08-.01 1.957-.01 2.226 0 .315.194.69.8.576 4.766-1.587 8.2-6.085 8.2-11.388 0-6.627-5.373-12-12-12z" clip-rule="evenodd"></path></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/adwaithsk" target="_blank" class="text-blue-600 hover:text-blue-700 transition-colors" aria-label="LinkedIn profile">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M22.23 0H1.77C.794 0 0 .794 0 1.77v20.46c0 .976.794 1.77 1.77 1.77h20.46c.976 0 1.77-.794 1.77-1.77V1.77c0-.976-.794-1.77-1.77-1.77zM7.17 20.31H3.65V9.11h3.52v11.2zM5.41 7.5c-1.16 0-2.1-.94-2.1-2.1 0-1.16.94-2.1 2.1-2.1 1.16 0 2.1.94 2.1 2.1 0 1.16-.94 2.1-2.1 2.1zm15.89 12.81h-3.52v-5.6c0-1.33-.02-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.96v5.69h-3.52V9.11h3.38v1.55c.47-.96 1.73-1.84 3.47-1.84 3.71 0 4.4 2.44 4.4 5.61v6.59z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-white py-6">
+        <div class="container mx-auto px-6 text-center text-sm">
+            <p>&copy; 2024 Adwaith S Kumar. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Typing animation effect for hero text
+        const words = ["Work", "Solve Problems", "Inspire", "Create", "Innovate"];
+        let i = 0;
+        let j = 0;
+        let currentWord = "";
+        let isDeleting = false;
+        const typingText = document.getElementById("typing-text");
+
+        function type() {
+            if (i < words.length) {
+                if (!isDeleting && j <= words[i].length) {
+                    currentWord = words[i].substring(0, j);
+                    j++;
+                }
+
+                if (isDeleting && j <= words[i].length) {
+                    currentWord = words[i].substring(0, j);
+                    j--;
+                }
+
+                if (j === words[i].length + 1) {
+                    isDeleting = true;
+                    // Add a delay before starting to delete
+                    setTimeout(() => requestAnimationFrame(type), 1000);
+                    return;
+                }
+
+                if (isDeleting && j === -1) {
+                    isDeleting = false;
+                    i++;
+                    if (i === words.length) {
+                        i = 0;
+                    }
+                }
+
+                typingText.innerHTML = currentWord;
+                const typingSpeed = isDeleting ? 50 : 150;
+                setTimeout(() => requestAnimationFrame(type), typingSpeed);
+            }
+        }
+
+        // Wait for the window to load before starting the animation
+        window.onload = function() {
+            type();
+        };
+
+    </script>
+</body>
+</html>
